@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeBite Culinary Academy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+<!-- LOGIN -->
+<div id="loginScreen" class="login-screen fade-in">
+<h2>🍽️ Welcome to CodeBite</h2>
+<input type="text" id="studentName" placeholder="Masukkan Nama Anda">
+<button onclick="login()">Masuk Restoran Coding</button>
+</div>
+
+<!-- MAIN -->
+<div id="mainContent" style="display:none;">
+
+<nav class="navbar">
+<h1>CodeBite Academy</h1>
+<div>👨‍🍳 <span id="displayName"></span></div>
+</nav>
+
+<section class="hero fade-in">
+<h2>Belajar Coding Seperti Fine Dining</h2>
+<p>Appetizer → Main Course → Dessert</p>
+</section>
+
+<section class="menu-section">
+
+<!-- HTML Lesson -->
+<div class="lesson-content fade-in">
+<h3>🥗 Appetizer: HTML (Struktur Restoran)</h3>
+<p><strong>HTML</strong> adalah pondasi website. Bayangkan sebagai <em>bangunan, lantai, meja, kursi</em>.</p>
+<ul>
+<li>Membuat struktur halaman</li>
+<li>Menampilkan teks, gambar, video</li>
+<li>Menyediakan form interaktif</li>
+<li>Menyisipkan media</li>
+</ul>
+<pre>
+&lt;h1&gt;Selamat Datang&lt;/h1&gt;
+&lt;p&gt;Belajar HTML&lt;/p&gt;
+&lt;button&gt;Klik&lt;/button&gt;
+</pre>
+<button onclick="completeLesson(1)">Selesaikan HTML</button>
+</div>
+
+<!-- CSS Lesson -->
+<div class="lesson-content fade-in">
+<h3>🍝 Main Course: CSS (Dekorasi Restoran)</h3>
+<p><strong>CSS</strong> mengatur tampilan. Bayangkan sebagai <em>cat dinding, dekorasi, pencahayaan</em>.</p>
+<ul>
+<li>Mengatur warna, font, shadow</li>
+<li>Layout responsif: flex, grid</li>
+<li>Membuat animasi: hover, fade</li>
+</ul>
+<pre>
+h1 {
+color: gold;
+text-align: center;
+}
+button {
+background: black;
+color: white;
+padding: 10px 20px;
+border-radius: 5px;
+}
+</pre>
+<button onclick="completeLesson(2)">Selesaikan CSS</button>
+</div>
+
+<!-- JS Lesson -->
+<div class="lesson-content fade-in">
+<h3>🍰 Dessert: JavaScript (Pelayanan Restoran)</h3>
+<p><strong>JavaScript</strong> membuat website interaktif, seperti waiter melayani pelanggan.</p>
+<ul>
+<li>Menangani klik, hover, submit, input</li>
+<li>Manipulasi DOM</li>
+<li>Membuat animasi & validasi form</li>
+</ul>
+<pre>
+// Klik tombol
+const button = document.querySelector('button');
+button.addEventListener('click', function(){
+alert("Pesanan diterima!");
+});
+</pre>
+<button onclick="completeLesson(3)">Selesaikan JavaScript</button>
+</div>
+
+<!-- Progress -->
+<div class="progress-container">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+<p id="progressText">Progress: 0%</p>
+<button id="certificateBtn" style="display:none;" onclick="showCertificate()">
+🎓 Lihat Sertifikat
+</button>
+
+<!-- Certificate -->
+<div id="certificate" class="certificate" style="display:none;">
+<h2>🏆 Certificate of Completion</h2>
+<p>Diberikan kepada:</p>
+<h3 id="certName"></h3>
+<p>Telah menyelesaikan CodeBite Culinary Academy</p>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 CodeBite Culinary Academy</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

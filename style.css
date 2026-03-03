@@ -1,0 +1,133 @@
+:root{
+--bg:#0f0f0f;
+--text:white;
+--card:#1a1a1a;
+--gold:#D4AF37;
+}
+body.light{
+--bg:#f5f5f5;
+--text:#222;
+--card:white;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+font-family:'Poppins',sans-serif;
+text-align:center;
+transition:0.3s;
+}
+
+h1,h2,h3{
+font-family:'Playfair Display',serif;
+color:var(--gold);
+}
+
+.theme-toggle{
+position:fixed;
+top:15px;
+right:15px;
+padding:8px 12px;
+border:none;
+cursor:pointer;
+}
+
+.login-screen{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:15px;
+}
+
+input{
+padding:10px;
+border-radius:5px;
+border:none;
+}
+
+button{
+padding:10px 15px;
+background:var(--gold);
+border:none;
+cursor:pointer;
+margin:5px;
+transition:0.3s;
+}
+button:hover{
+transform:scale(1.05);
+}
+
+.navbar{
+background:black;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.hero{
+padding:60px 20px;
+}
+
+.lesson-content{
+background:var(--card);
+margin:20px auto;
+padding:20px;
+max-width:500px;
+border-radius:10px;
+text-align:left;
+}
+
+.lesson-content ul{
+margin:10px 0 15px 20px;
+}
+
+.lesson-content pre{
+background:black;
+padding:15px;
+margin:15px 0;
+overflow:auto;
+color:#00ffcc;
+}
+
+.progress-container{
+width:300px;
+height:12px;
+background:#444;
+margin:20px auto;
+border-radius:10px;
+}
+
+.progress-bar{
+height:12px;
+width:0%;
+background:var(--gold);
+border-radius:10px;
+transition:0.3s;
+}
+
+.certificate{
+background:var(--card);
+padding:30px;
+margin:30px auto;
+max-width:500px;
+border:3px solid var(--gold);
+border-radius:10px;
+}
+
+.fade-in{
+animation:fade 1s ease-in;
+}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+footer{
+margin-top:40px;
+padding:20px;
+background:black;
+}
